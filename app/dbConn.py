@@ -1,4 +1,3 @@
-#import pymongo
 import psycopg2
 import config
 
