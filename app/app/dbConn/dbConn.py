@@ -1,5 +1,5 @@
 import psycopg2
-from ..config import config
+from config import config
 
 
 def getTrails_sql(long, lat, rad):

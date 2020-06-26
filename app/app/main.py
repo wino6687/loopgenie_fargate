@@ -1,10 +1,10 @@
 import random
-from .dbConn import dbConn
+from dbConn import dbConn
 from flask import jsonify
-from .tripopt.tripopt import RouteOptimizer
+from tripopt.tripopt import RouteOptimizer
 
 import shapely.wkb as wkb
-from .config import config
+from config import config
 
 from shapely.geometry import MultiLineString, Point
 from shapely import ops
