@@ -423,11 +423,11 @@ def save_gpx(optimized_network, file_location, gpx_type = "optimization"):
         optimized_network.save_gpx(Path, file_location)
     
 
-@app.route('/newtrip', methods=["POST"])
+@app.route('/newtrip', methods=["POST", "GET"])
 def run_system():
-    location = request.args['location']
-    distance = int(request.args['distance'])*1000
-    tripLength = int(request.args['tripLength'])
+    location = request.form['location']
+    distance = int(request.form['distance'])*1000
+    tripLength = int(request.form['tripLength'])
     
     if location: 
         location = " ".join(location)
