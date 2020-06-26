@@ -5,3 +5,5 @@ WORKDIR /code
 RUN pip install -r requirements.txt
 
 COPY ./app /app
+
+CMD ["python", "app/app/main.py"]

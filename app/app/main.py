@@ -464,3 +464,7 @@ def server_error(e):
     An internal error occurred: <pre>{}</pre>
     See logs for full stacktrace.
     """.format(e), 502
+
+if __name__ == "__main__":
+   # Only for debugging while developing
+   app.run(host='0.0.0.0', debug=True, port=80)
