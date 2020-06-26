@@ -1,16 +1,7 @@
 FROM tiangolo/uwsgi-nginx-flask:python3.8
 
-RUN pip install flask
-RUN pip install geojson
-RUN pip install psycopg2
-RUN pip install shapely
-RUN pip install geocoder
-RUN pip install ortools
-RUN pip install requests
-RUN pip install numpy
-RUN pip install networkx
-RUN pip install flask-cors
+ADD . /code
+WORKDIR /code
+RUN pip install -r requirements.txt
 
 COPY ./app /app
-
-# CMD ["python", "app/app/main.py"]
