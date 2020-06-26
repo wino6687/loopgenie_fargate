@@ -384,7 +384,7 @@ class TripPlanner():
 
 def LocationName(location):
     g = geocoder.google(location,key = config.geoencoder_key)
-    print(g.latlng)
+    # print(g.latlng)
     return g.latlng
 
 # will deprecate this function once we work with the frontend
@@ -448,7 +448,6 @@ def run_system():
     network = setup_trips(trails, location)
     trip = create_trip(network, maxdist = tripLength)
     json = trip.save_geojson(Path)
-    trip.save_gpx(Path)
     return jsonify(json)
 
 
