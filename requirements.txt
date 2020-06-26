@@ -1,6 +1,5 @@
 Flask
 geojson
-geopy
 psycopg2
 shapely
 geocoder

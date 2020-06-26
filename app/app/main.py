@@ -1,10 +1,10 @@
 import random
-import dbConn
+from .dbConn import dbConn
 from flask import jsonify
-from tripopt import RouteOptimizer
+from .tripopt.tripopt import RouteOptimizer
 
 import shapely.wkb as wkb
-import config
+from .config import config
 
 from shapely.geometry import MultiLineString, Point
 from shapely import ops
@@ -477,5 +477,5 @@ def server_error(e):
     """.format(e), 502
 
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True, port=80)
+# if __name__ == "__main__":
+    # app.run(host='0.0.0.0', debug=True, port=80)
