@@ -384,7 +384,7 @@ class TripPlanner():
 
 def LocationName(location):
     g = geocoder.google(location,key = config.geoencoder_key)
-    # print(g.latlng)
+    print(g.latlng)
     return g.latlng
 
 # will deprecate this function once we work with the frontend
