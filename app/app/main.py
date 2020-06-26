@@ -28,17 +28,6 @@ global snap_tolerance
 km_to_degree   = 111
 snap_tolerance = 1e-4
 
-
-# TODO
-    # * Select only the longest "duplicate" trail
-    # * Database side of tool
-    # * Integrate location so it uses a location and DB results rather than a folder
-    # * Geospatial database to hold tracks
-    # * Download and add tracks if not downloaded
-    # * Subset to use data in location
-    # * add campground/land-type layer (http://www.ultimatecampgrounds.com/index.php/products/full-map)
-    # http://www.uscampgrounds.info/
-
                   
 class Track():
     def __init__(self, filename):
@@ -475,7 +464,3 @@ def server_error(e):
     An internal error occurred: <pre>{}</pre>
     See logs for full stacktrace.
     """.format(e), 502
-
-
-# if __name__ == "__main__":
-    # app.run(host='0.0.0.0', debug=True, port=80)
